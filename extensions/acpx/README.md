@@ -19,6 +19,22 @@ Restart the Gateway after installing or updating the plugin.
 - MCP bridge helpers for OpenClaw tools and plugin tools.
 - Static runtime assets used by the ACP process bridge.
 
+## Permission prompts
+
+The default `permissionMode: "approve-reads"` and
+`nonInteractivePermissions: "plugin"` combination auto-approves ACP reads and
+routes write, execute, and other side-effect prompts through OpenClaw plugin
+approvals. The originating chat can then resolve the pending ACP request with
+native approval buttons or `/approve <id> allow-once|deny`.
+
+Enable and route `approvals.plugin` for the target channel. Host exec approvals
+and channel exec approvers are separate and do not authorize ACPX plugin
+approvals. `permissionMode: "approve-all"` remains available as an explicit
+no-prompt mode.
+
+See
+https://docs.openclaw.ai/plugins/plugin-permission-requests#acp-harness-permissions.
+
 ## Configure
 
 Use the ACP docs for harness-specific setup, permission modes, and model/runtime selection:

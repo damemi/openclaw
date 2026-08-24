@@ -29,7 +29,7 @@ describe("embedded acpx plugin config", () => {
     expect(resolved.cwd).toBe(workspaceDir);
     expect(resolved.stateDir).toBe(path.join(workspaceDir, "state"));
     expect(resolved.permissionMode).toBe("approve-reads");
-    expect(resolved.nonInteractivePermissions).toBe("fail");
+    expect(resolved.nonInteractivePermissions).toBe("plugin");
     expect(resolved.timeoutSeconds).toBe(120);
     expect(resolved.probeAgent).toBeUndefined();
     expect(resolved.agents).toStrictEqual({});

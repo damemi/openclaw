@@ -100,7 +100,7 @@ export function resolveAcpxPluginRoot(moduleUrl: string = import.meta.url): stri
 }
 
 const DEFAULT_PERMISSION_MODE: AcpxPermissionMode = "approve-reads";
-const DEFAULT_NON_INTERACTIVE_POLICY: AcpxNonInteractivePermissionPolicy = "fail";
+const DEFAULT_NON_INTERACTIVE_POLICY: AcpxNonInteractivePermissionPolicy = "plugin";
 
 type ParseResult =
   | { ok: true; value: AcpxPluginConfig | undefined }
